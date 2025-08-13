@@ -48,6 +48,10 @@ Key Issue: No encryption (HTTP instead of HTTPS); sensitive form data visible in
 
 <img width="1920" height="936" alt="Image" src="https://github.com/user-attachments/assets/6886254f-fb85-4f94-bd50-bbe1f8a0e9e7" />
 
+# 🚨 Security Findings
+Critical Vulnerabilities Discovered
+
+Exposed Personal Data (HIGH RISK) Captured Form Data: Username: "elevatelabsadmin" Pasword: "aabhasthaintern123"
 
 # 4. ICMP (Internet Control Message Protocol)
 
