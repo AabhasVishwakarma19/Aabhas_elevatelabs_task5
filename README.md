@@ -16,23 +16,28 @@ Target Website: http://testhtml5.vulnweb.com/#/popular
 
 # Key Analysis of Captured Protocols
 
-1. ARP (Address Resolution Protocol)
+# 1. ARP (Address Resolution Protocol)
 
 Traffic Observed: 6 ARP request/reply packets.
 
 Purpose: Resolved MAC-to-IP mappings within the VMware virtual network.
 
 Security Note: Normal behavior, but ARP spoofing could be a potential risk in larger networks.
+<img width="1920" height="936" alt="Image" src="https://github.com/user-attachments/assets/55475533-2ed5-4959-86a5-b4c9c43b294a" />
 
-2. DNS (Domain Name System)
+
+# 2. DNS (Domain Name System)
 
 Traffic Observed: 200 query/response packets for domains including google.com, tesla.com, facebook.com, acunetix.com.
 
 Purpose: Mapped domain names to IP addresses for communication.
 
-Security Note: Queries were in plaintext (UDP port 53); susceptible to DNS spoofing or interception without DNSSEC.
+Security Note: Queries were in plaintext (UDP port 53); susceptible to DNS spoofing.
 
-3. HTTP (Hypertext Transfer Protocol)
+
+<img width="1920" height="936" alt="Image" src="https://github.com/user-attachments/assets/0430adcb-916d-40ec-9a56-2d119f4a6fdf" />
+
+# 3. HTTP (Hypertext Transfer Protocol)
 
 Traffic Observed: 80 request/response packets to host testhtml5.vulnweb.com.
 
@@ -40,7 +45,11 @@ Methods Used: GET, POST.
 
 Key Issue: No encryption (HTTP instead of HTTPS); sensitive form data visible in plain text, making it vulnerable to interception.
 
-4. ICMP (Internet Control Message Protocol)
+
+<img width="1920" height="936" alt="Image" src="https://github.com/user-attachments/assets/6886254f-fb85-4f94-bd50-bbe1f8a0e9e7" />
+
+
+# 4. ICMP (Internet Control Message Protocol)
 
 Traffic Observed: 30 echo requests/replies (ping to tesla.com).
 
@@ -48,7 +57,11 @@ Purpose: Used for connectivity checks and diagnostics.
 
 Security Note: Normal for troubleshooting; excessive ICMP could indicate reconnaissance or DoS attempts.
 
-5. TCP (Transmission Control Protocol)
+
+<img width="1920" height="936" alt="Image" src="https://github.com/user-attachments/assets/f0a4cea2-d558-43eb-b6d6-0fbf863521ab" />
+
+
+# 5. TCP (Transmission Control Protocol)
 
 Traffic Observed: 1,849 packets (~51% of all captured traffic).
 
@@ -58,6 +71,7 @@ Key Features: Three-way handshake, sequencing, acknowledgments.
 
 Security Note: Core transport protocol; potential risk if unencrypted application data is carried.
 
+<img width="1920" height="936" alt="Image" src="https://github.com/user-attachments/assets/68ab87b1-bc42-4417-b7bd-4af9847cdeca" />
 
 #  Step-by-Step Process
 Environment Setup
